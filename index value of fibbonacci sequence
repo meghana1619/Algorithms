@@ -1,0 +1,15 @@
+function findFibonacciRecursive(n){
+  if(n<2)
+    return n;
+  return findFibonacciRecursive(n-1)+findFibonacciRecursive(n-2);
+}
+//findFibonacciRecursive(5)
+
+function findFibonacciIterative(n){
+  let a=[0,1];
+  for(let i=2;i<=n;i++){
+    a.push(a[i-2]+a[i-1])
+  }
+  return a[n];
+}
+findFibonacciIterative(5)
